@@ -1,0 +1,25 @@
+{
+  "$schema": "https://jsonapi.org/format/1.1/schema",
+  "meta": {
+    "description": "Nulds API conforms to JSON:API 1.1 for request/response format.",
+    "specVersion": "1.1",
+    "documentation": "https://jsonapi.org/format/"
+  },
+  "baseUrl": "/",
+  "contentType": "application/vnd.api+json",
+  "resources": [
+    {
+      "type": "cron-jobs",
+      "description": "A single run of the Nulds fetch and event processing (same as scheduled cron).",
+      "endpoints": [
+        {
+          "method": "POST",
+          "path": "/nulds/cron-jobs",
+          "description": "Create a cron-job run. Fetches from NULDS_API_URL and processes events."
+        }
+      ]
+    }
+  ],
+  "supportedExtensions": [],
+  "profiles": []
+}
